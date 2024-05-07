@@ -16,6 +16,9 @@ Utwórz klasę Account do zarządzania kontem bankowym z operacjami wpłaty i wy
 ### Implementuj metody klasy:
 - Uzupełnij metody klasy, aby wszystkie testy przeszły pomyślnie.
 
+### Nagranie video wykonania zadania
+- https://youtu.be/NDuJmJE__U4
+
 # Zadanie 2:
 Utwórz klasę TemperatureConverter do konwersji temperatur między stopniami Celsjusza, Fahrenheita i Kelvina. Napisz testy jednostkowe.
 
@@ -34,6 +37,9 @@ Utwórz klasę TemperatureConverter do konwersji temperatur między stopniami Ce
 
 ### Implementuj metody klasy:
 - Uzupełnij metody konwersji temperatur w taki sposób, aby wszystkie testy przeszły pomyślnie.
+
+### Nagranie video wykonania zadania
+https://youtu.be/la6TgH4YIC4
 
 # Zadanie 3*:
 Utwórz klasę TodoList, która pozwoli na zarządzanie listą zadań do wykonania. Napisz testy jednostkowe.
