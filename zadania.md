@@ -39,7 +39,7 @@ Utwórz klasę TemperatureConverter do konwersji temperatur między stopniami Ce
 - Uzupełnij metody konwersji temperatur w taki sposób, aby wszystkie testy przeszły pomyślnie.
 
 ### Nagranie video wykonania zadania
-https://youtu.be/la6TgH4YIC4
+- https://youtu.be/la6TgH4YIC4
 
 # Zadanie 3*:
 Utwórz klasę TodoList, która pozwoli na zarządzanie listą zadań do wykonania. Napisz testy jednostkowe.
