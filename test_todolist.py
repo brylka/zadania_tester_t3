@@ -32,5 +32,12 @@ class TestTodoList(unittest.TestCase):
         #self.assertEqual({'id': 1, 'task': "Zadanie testowe", 'done': True}, self.todolist.get_all_tasks()[0])
         #self.assertEqual(True, self.todolist.get_all_tasks()[0]['done'])
         self.assertTrue(self.todolist.get_all_tasks()[-1]['done'])
+
+    def test_get_all_tasks(self):
+        self.assertEqual(1, len(self.todolist.get_all_tasks()))
+        self.todolist.add_task("Zadanie testowe")
+        self.assertEqual(2, len(self.todolist.get_all_tasks()))
+        self.assertEqual("Zadanie testowe", self.todolist.get_all_tasks()[1]['task'])
+
 if __name__ == "__main__":
     unittest.main()
