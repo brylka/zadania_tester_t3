@@ -16,3 +16,6 @@ class TestTemperatureConverter(unittest.TestCase):
         self.assertAlmostEqual(310.93, TemperatureConverter.fahrenheit_to_kelvin(100), places=2)
     def test_kelvin_to_fahrenheit(self):
         self.assertAlmostEqual(100, TemperatureConverter.kelvin_to_fahrenheit(310.93), places=2)
+
+if __name__ == '__main__':
+    unittest.main()
