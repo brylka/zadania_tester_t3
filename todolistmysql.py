@@ -23,12 +23,17 @@ class TodoList:
                 task['done'] = True
                 break
     def get_all_tasks(self):
-        return self.tasks
+        sql = "SELECT * FROM tasks"
+        self.cursor.execute(sql)
+        return self.cursor.fetchall()
+        #return self.tasks
 
 
 if __name__ == '__main__':
     db = pymysql.connect(host='localhost', user='root', password='', db='todolist')
     todolist = TodoList(db)
+
+    print(todolist.get_all_tasks())
 
 
 # CREATE TABLE tasks (id INT NOT NULL AUTO_INCREMENT , task TEXT NOT NULL , done BOOLEAN NOT NULL DEFAULT FALSE , PRIMARY KEY (`id`))
