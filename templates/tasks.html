@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Zadań</title>
+    <style>
+        .task-done {
+            color: green;
+        }
+        .task-not-done {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista Zadań</h1>
+    <ul>
+        {% for task in tasks %}
+        <li class="{{ 'task-done' if task['done'] else 'task-not-done' }}">
+            {{ task['task'] }}
+            {% if not task['done'] %}
+            - <form style="display: inline" method="post">
+                <button type="submit" name="done" value="{{ task['id'] }}">Wykonane</button>
+            </form>
+            {% endif %}
+            - <form style="display: inline" method="post">
+                <button type="submit" name="delete" value="{{ task['id'] }}">Usuń</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Dodaj nowe zadanie</h2>
+    <form method="post">
+        <input type="text" name="task" required>
+        <button type="submit">Dodaj zadanie</button>
+    </form>
+</body>
+</html>
