@@ -20,6 +20,7 @@ class TestTodoApp(unittest.TestCase):
         cls.random_task_name = f"Task {generate_random_string()}"
         cls.driver = webdriver.Chrome()
         cls.driver.get("http://127.0.0.1:5000/tasks")
+        time.sleep(5)
 
     @classmethod
     def tearDownClass(cls):
