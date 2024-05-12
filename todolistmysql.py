@@ -51,6 +51,7 @@ if __name__ == '__main__':
     print(todolist.get_all_tasks())
     todolist.remove_task(task_id)
     print(todolist.get_all_tasks())
+    db.close()
 
 
 
