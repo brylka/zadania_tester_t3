@@ -5,8 +5,16 @@ from todolistmysql import TodoList
 class TestTodoList(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-       cls.db = pymysql.connect(host='localhost', user='root', password='', db='todolist')
-       cls.todolist = TodoList(cls.db)
+        cls.db = pymysql.connect(host='localhost', user='root', password='', db='todolist')
+        cls.todolist = TodoList(cls.db)
+        with cls.db.cursor() as cursor:
+            cursor.execute("TRUNCATE TABLE tasks")
+
+    @classmethod
+    def tearDownClass(cls):
+        with cls.db.cursor() as cursor:
+            cursor.execute("TRUNCATE TABLE tasks")
+        cls.db.close()
 
     def test_1_add_task(self):
         test_id = self.todolist.add_task("Przykładowe zadanie testowe")
